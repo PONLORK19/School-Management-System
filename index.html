@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>School Management System</title>
+    <link rel="icon" type="image/png" href="img/school-academy-logo.png" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Logo -->
+      <div class="logo-container">
+        <img
+          src="img/school-academy-logo.png"
+          alt="School Academy Logo"
+          class="logo"
+        />
+      </div>
+
+      <!-- Welcome Message -->
+      <div class="welcome-message">
+        <p>Welcome to SRS dashboard. Please login to continue</p>
+        <h2>LOGIN</h2>
+      </div>
+
+      <!-- Form -->
+      <form id="loginForm">
+        <!-- Email Input -->
+        <label for="email">Email</label>
+        <div class="input-group">
+          <img src="img/email-icon.png" alt="Email Icon" class="icon" />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="ponlork2535@gmail.com"
+            required
+          />
+        </div>
+
+        <!-- Password Input -->
+        <label for="password">Password</label>
+        <div class="input-group">
+          <img src="img/password-icon.png" alt="Password Icon" class="icon" />
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="********"
+            required
+          />
+          <img
+            src="img/eye-icon.png"
+            alt="Show Password"
+            class="show-password-icon"
+            id="togglePassword"
+          />
+        </div>
+
+        <!-- Forgot Password Link -->
+        <a href="#" class="forgot-password">Forgot password?</a>
+
+        <!-- Login Button -->
+        <!-- <button type="submit" class="login-btn">Login</button> -->
+        <div class="button-wrapper">
+          <button type="submit" class="login-btn">Login</button>
+        </div>
+      </form>
+    </div>
+
+    <script src="JS/script.js"></script>
+  </body>
+</html>

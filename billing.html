@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>School Management System</title>
+    <link rel="icon" type="image/png" href="img/school-academy-logo.png" />
+    <link rel="stylesheet" href="css/billing.css" />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="sidebar-logo">
+          <img src="img/school-academy-logo.png" alt="Logo" />
+        </div>
+        <nav class="sidebar-menu">
+          <a href="dashboard.html">
+            <span class="icon">
+              <img src="img/dashborad-icon.png" alt="Dashboard Icon" />
+            </span>
+            Dashboard
+          </a>
+          <a href="teacher.html">
+            <span class="icon">
+              <img src="img/teacher-icon.png" alt="Teachers Icon" />
+            </span>
+            Teachers
+          </a>
+          <a href="student.html">
+            <span class="icon">
+              <img src="img/student-icon.png" alt="Student Icon" />
+            </span>
+            Students
+          </a>
+          <a href="classes.html">
+            <span class="icon">
+              <img src="img/class-icon.png" alt="Class Icon" />
+            </span>
+            Classes
+          </a>
+          <a href="billing.html" class="active">
+            <span class="icon">
+              <img src="img/billing-icon.png" alt="Billing Icon" />
+            </span>
+            Billing
+          </a>
+        </nav>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-area">
+        <div class="billing-container">
+          <div class="billing-header">
+            <h2>Here is all teacher billing's</h2>
+            <button id="openPaymentModal" class="action-btn add-btn">
+              Add Payment
+            </button>
+          </div>
+          <table class="billing-table">
+            <thead>
+              <tr>
+                <th>NAME</th>
+                <th>START DATE</th>
+                <th>END DATE</th>
+                <th>TOTAL</th>
+                <th>STATUS</th>
+              </tr>
+            </thead>
+            <tbody id="billingTableBody">
+              <tr>
+                <td>Keo Chanponlork</td>
+                <td>10 Feb 2025</td>
+                <td>17 Feb 2025</td>
+                <td>$100</td>
+                <td><span class="status-label paid">Paid</span></td>
+              </tr>
+              <tr>
+                <td>Keo Chanponlork</td>
+                <td>17 Feb 2025</td>
+                <td>24 Feb 2025</td>
+                <td>$90</td>
+                <td><span class="status-label unpaid">Unpaid</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Modal for Adding Payment -->
+        <div id="paymentModal" class="modal" style="display: none">
+          <div class="modal-content">
+            <h3>Add Payment</h3>
+            <form id="paymentForm">
+              <input
+                type="text"
+                id="teacherName"
+                placeholder="Teacher Name"
+                required
+              />
+              <input
+                type="date"
+                id="startDate"
+                placeholder="Start Date"
+                required
+              />
+              <input type="date" id="endDate" placeholder="End Date" required />
+              <input
+                type="number"
+                id="totalAmount"
+                placeholder="Total ($)"
+                required
+              />
+              <select id="status" required>
+                <option value="paid">Paid</option>
+                <option value="unpaid" selected>Unpaid</option>
+              </select>
+              <div class="modal-actions">
+                <button type="submit" id="submitPayment">Submit</button>
+                <button type="button" id="closePaymentModal">Cancel</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="js/billing.js"></script>
+  </body>
+</html>

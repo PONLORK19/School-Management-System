@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>School Management System</title>
+    <link rel="icon" type="image/png" href="img/school-academy-logo.png" />
+    <link rel="stylesheet" href="css/students.css" />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="sidebar-logo">
+          <img src="img/school-academy-logo.png" alt="Logo" />
+        </div>
+        <nav class="sidebar-menu">
+          <a href="dashboard.html">
+            <span class="icon"
+              ><img src="img/dashborad-icon.png" alt="Dashboard Icon"
+            /></span>
+            Dashboard
+          </a>
+          <a href="teacher.html">
+            <span class="icon"
+              ><img src="img/teacher-icon.png" alt="Teachers Icon"
+            /></span>
+            Teachers
+          </a>
+          <a href="student.html" class="active">
+            <span class="icon"
+              ><img src="img/student-icon.png" alt="Student Icon"
+            /></span>
+            Students
+          </a>
+          <a href="classes.html">
+            <span class="icon"
+              ><img src="img/class-icon.png" alt="Class Icon"
+            /></span>
+            Classes
+          </a>
+          <a href="billing.html">
+            <span class="icon"
+              ><img src="img/billing-icon.png" alt="Billing Icon"
+            /></span>
+            Billing
+          </a>
+        </nav>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-area">
+        <div class="top-bar">
+          <div class="search-wrapper">
+            <span class="icon">
+              <img src="img/search-student-icon.png" alt="search-icon" />
+            </span>
+            <input type="text" id="studentSearch" placeholder="Search..." />
+          </div>
+
+          <div class="controls">
+            <span>Total <span id="studentCount">0</span> students</span>
+            <button id="addBtn">
+              Add new
+              <span class="icon">
+                <img src="img/add-student-icon.png" alt="add-icon" />
+              </span>
+            </button>
+            <button id="deleteBtn">
+              Delete
+              <span class="icon">
+                <img src="img/delete-student-icon.png" alt="delete-icon" />
+              </span>
+            </button>
+          </div>
+        </div>
+
+        <table class="student-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>NAME</th>
+              <th>GENDER</th>
+              <th>GRADE</th>
+              <th>SCHOOL</th>
+              <th>STATUS</th>
+              <th>ACTIONS</th>
+            </tr>
+          </thead>
+          <tbody id="studentTableBody">
+            <!-- Dynamic rows appear here -->
+          </tbody>
+        </table>
+      </main>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="addModal">
+      <div class="modal-content">
+        <h3>Add Student</h3>
+        <form id="studentForm">
+          <input type="text" id="name" placeholder="Name" required />
+          <select id="gender" required>
+            <option value="">Gender</option>
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+          </select>
+          <input type="number" id="grade" placeholder="Grade" required />
+          <input type="text" id="school" placeholder="School" required />
+          <button type="submit">Add</button>
+          <button type="button" id="closeModal">Cancel</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="js/student.js"></script>
+  </body>
+</html>

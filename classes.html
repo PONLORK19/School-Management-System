@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>School Management System</title>
+    <link rel="icon" type="image/png" href="img/school-academy-logo.png" />
+    <link rel="stylesheet" href="css/classes.css" />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="sidebar-logo">
+          <img src="img/school-academy-logo.png" alt="Logo" />
+        </div>
+        <nav class="sidebar-menu">
+          <a href="dashboard.html"
+            ><span class="icon"><img src="img/dashborad-icon.png" /></span>
+            Dashboard</a
+          >
+          <a href="teacher.html"
+            ><span class="icon"><img src="img/teacher-icon.png" /></span>
+            Teachers</a
+          >
+          <a href="student.html"
+            ><span class="icon"><img src="img/student-icon.png" /></span>
+            Students</a
+          >
+          <a href="classes.html" class="active"
+            ><span class="icon"><img src="img/class-icon.png" /></span>
+            Classes</a
+          >
+          <a href="billing.html"
+            ><span class="icon"><img src="img/billing-icon.png" /></span>
+            Billing</a
+          >
+        </nav>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-area">
+        <div class="top-bar">
+          <div class="search-wrapper">
+            <span class="icon"><img src="img/search-student-icon.png" /></span>
+            <input type="text" id="classSearch" placeholder="Search class..." />
+          </div>
+
+          <div class="controls">
+            <span>Total <span id="classCount">0</span> classes</span>
+            <button id="openModal">
+              Add new
+              <span class="icon"><img src="img/add-student-icon.png" /></span>
+            </button>
+
+            <button id="deleteBtn">
+              Delete
+              <span class="icon"
+                ><img src="img/delete-student-icon.png"
+              /></span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Class Cards Section -->
+        <section class="class-grid" id="classList">
+          <!-- dynamically added class cards -->
+        </section>
+      </main>
+    </div>
+
+    <!-- Modal for Adding Class -->
+    <div class="modal" id="addClassModal">
+      <div class="modal-content">
+        <h3>Add New Class</h3>
+        <form id="classForm">
+          <input type="text" id="classcode" placeholder="Class code" required />
+          <select id="teacherName" required>
+            <option value="">Select Teacher</option>
+            <!-- options will be populated dynamically -->
+          </select>
+
+          <input
+            type="number"
+            id="studentCount"
+            placeholder="Student Limit"
+            required
+          />
+          <!-- <label for="roomName">Room</label> -->
+          <input type="text" id="roomName" placeholder="Enter room name" />
+
+          <!-- Time Selection -->
+          <!-- Start Time -->
+          <input type="time" id="startTime" required />
+
+          <!-- End Time -->
+          <input type="time" id="endTime" required />
+
+          <select id="classroomType" required>
+            <option value="">Select Classroom Type</option>
+            <option value="Computer Lab">Onsite</option>
+            <option value="Science Lab">Online</option>
+            <option value="Standard">At house</option>
+          </select>
+
+          <div
+            id="studentCheckboxList"
+            style="
+              text-align: left;
+              max-height: 200px;
+              overflow-y: auto;
+              margin: 10px 0;
+            "
+          >
+            <!-- student checkboxes will be populated here -->
+          </div>
+
+          <button type="submit">Save</button>
+          <button type="button" id="closeClassModal">Cancel</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Modal for Viewing Class Details -->
+    <!-- Modal for Viewing Class Details -->
+    <div class="modal" id="classDetailModal">
+      <div class="modal-content">
+        <h3 id="detailClassName">Class Name</h3>
+        <p><strong>Teacher:</strong> <span id="detailTeacher"></span></p>
+        <p><strong>Room Type:</strong> <span id="detailType"></span></p>
+        <p><strong>Student Limit:</strong> <span id="detailLimit"></span></p>
+
+        <p><strong>Students:</strong></p>
+        <ul id="detailStudents" style="text-align: left"></ul>
+
+        <!-- NEW SECTION: Add Student -->
+        <p><strong>Add Student:</strong></p>
+        <select id="addStudentSelect"></select>
+        <button id="addStudentBtn">Add Student</button>
+
+        <br /><br />
+        <button type="button" id="closeDetailModal">Close</button>
+      </div>
+    </div>
+
+    <script src="js/classes.js"></script>
+  </body>
+</html>

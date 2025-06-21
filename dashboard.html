@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>School Management System</title>
+    <link rel="icon" type="image/png" href="img/school-academy-logo.png" />
+    <link rel="stylesheet" href="/css/dashboard.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="sidebar-logo">
+          <img src="img/school-academy-logo.png" alt="Logo" />
+        </div>
+        <nav class="sidebar-menu">
+          <a href="#" class="active"><span class="icon"><img src="img/dashborad-icon.png" alt="Dashboard Icon" /></span> Dashboard</a>
+          <a href="teacher.html"><span class="icon"><img src="img/teacher-icon.png" alt="Teachers Icon" /></span> Teachers</a>
+
+          <a href="student.html"><span class="icon"><img src="img/student-icon.png" alt="Student Icon" /></span> Students</a>
+          <a href="classes.html"><span class="icon"><img src="img/class-icon.png" alt="Class Icon" /></span> Classes</a>
+          <a href="billing.html"><span class="icon"><img src="img/billing-icon.png" alt="Billing Icon" /></span> Billing</a>
+        </nav>
+      </aside>
+
+      <!-- Main -->
+      <div class="main-content">
+        <header class="navbar">
+          <div class="navbar-title">Welcome to School management system!</div>
+        </header>
+
+       <div class="dashboard-columns">
+  <!-- LEFT COLUMN: Donut Charts -->
+  <div class="dashboard-left">
+    <!-- Student Gender Donut Chart -->
+    <div class="card">
+      <h3>Students</h3>
+      <canvas id="genderChart"></canvas>
+      <p id="boyCount"><span style="color:#6a6af4">🔵</span> 0 (boys)</p>
+<p id="girlCount"><span style="color:#f4c542">🟡</span> 0 (girls)</p>
+
+    </div>
+
+    <!-- Attendance Donut Chart -->
+    <!-- <div class="card">
+      <h3>Attendance</h3>
+      <canvas id="attendanceChart"></canvas>
+      <p><span style="color:#6a6af4">🔵</span> Present &nbsp; <span style="color:#f4c542">🟡</span> Absent</p>
+      <div style="margin-top: 10px;">
+        📅 April 2023 &nbsp; | &nbsp; 🎓 Class 10th
+      </div>
+    </div> -->
+  </div>
+
+  <!-- MIDDLE COLUMN: Summary Cards -->
+  <div class="dashboard-middle">
+<div class="summary-card yellow">Students <div class="value" id="studentCount">0</div></div>
+<div class="summary-card blue">Teachers <div class="value" id="teacherCount">0</div></div>
+<div class="summary-card purple">Managers <div class="value" id="managerCount">5</div></div>
+<div class="summary-card orange">Classes <div class="value" id="classCount">0</div></div>
+
+  </div>
+
+  <!-- RIGHT COLUMN: Calendar -->
+  <div class="dashboard-right">
+    <div class="calendar-box">
+  <h4 id="calendarHeader">📅</h4>
+  <table>
+    <thead>
+      <tr>
+        <th>SUN</th><th>MON</th><th>TUE</th><th>WED</th><th>THU</th><th>FRI</th><th>SAT</th>
+      </tr>
+    </thead>
+    <tbody id="calendarBody">
+      <!-- dynamically filled by JS -->
+    </tbody>
+  </table>
+</div>
+
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="/js/dashboard.js"></script>
+  </body>
+</html>

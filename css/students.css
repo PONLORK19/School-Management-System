@@ -1,0 +1,261 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f4f6f9;
+}
+
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 220px;
+  background-color: #e1e4f0;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar-logo img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.sidebar-menu {
+  width: 100%;
+}
+
+.sidebar-menu a {
+  display: block;
+  padding: 12px 20px;
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+  transition: background 0.3s;
+}
+.sidebar-menu .icon img {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.sidebar-menu a.active,
+.sidebar-menu a:hover {
+  background-color: #0059ff;
+  color: white;
+  border-left: 4px solid white;
+}
+
+.main-area {
+  flex-grow: 1;
+  padding: 30px;
+  overflow-y: auto;
+  /* height: 100vh;
+  width: 100%; */
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.top-bar input[type="text"] {
+  flex: 1;
+  max-width: 600px;
+  padding: 12px 20px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.controls button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  color: white;
+}
+
+#addBtn {
+  background-color: #1e90ff;
+}
+
+#deleteBtn {
+  background-color: #ff0000;
+}
+
+.status-active {
+  background-color: #d1ffda;
+  color: green;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 13px;
+  display: inline-block;
+}
+
+.student-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.student-table thead {
+  background-color: #f5f5f5;
+  text-align: left;
+}
+
+.student-table th,
+.student-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 15px;
+}
+
+.student-table td:last-child {
+  text-align: center;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.modal-content h3 {
+  margin-bottom: 20px;
+}
+
+.modal-content input,
+.modal-content select {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.modal-content button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.modal-content button[type="submit"] {
+  background-color: #10b981;
+  color: white;
+}
+
+.modal-content button[type="button"] {
+  background-color: #f87171;
+  color: white;
+}
+
+.top-bar .icon img {
+  width: 25px;
+  height: 25px;
+  margin-left: 100px;
+  vertical-align: middle;
+}
+.search-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-wrapper .icon img {
+  width: 24px;
+  height: 24px;
+}
+
+.search-wrapper input {
+  width: 300px;
+  padding: 10px 16px;
+  border-radius: 25px;
+  border: 2px solid #007bff;
+  font-size: 14px;
+}
+
+.search-wrapper .search-icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  opacity: 0.6;
+}
+.controls button {
+  padding: 6px 10px; /* smaller padding */
+  border: none;
+  border-radius: 8px; /* slightly smaller radius */
+  font-size: 13px; /* smaller text */
+  display: flex;
+  align-items: center;
+  gap: 4px; /* tighter spacing between text and icon */
+  height: 36px; /* control height */
+}
+
+#addBtn {
+  background-color: #1e90ff;
+}
+
+#deleteBtn {
+  background-color: #ff0000;
+}
+#addBtn,
+#deleteBtn {
+  border-radius: 999px; /* Oval shape */
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+#addBtn:hover,
+#deleteBtn:hover {
+  transform: scale(1.05); /* Zoom-in effect on hover */
+}
+
+.controls .icon img {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+}

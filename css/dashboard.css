@@ -1,0 +1,174 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f4f6f9;
+}
+
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 220px;
+  background-color: #e1e4f0;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar-logo img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.sidebar-menu {
+  width: 100%;
+}
+
+.sidebar-menu a {
+  display: block;
+  padding: 12px 20px;
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+  transition: background 0.3s;
+}
+.sidebar-menu .icon img {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.sidebar-menu a.active,
+.sidebar-menu a:hover {
+  background-color: #0059ff;
+  color: white;
+  border-left: 4px solid white;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  background: white;
+  padding: 15px 30px;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* .dashboard-grid {
+  padding: 20px 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+  align-items: start;
+} */
+.dashboard-grid {
+  padding: 20px 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* <- changed from auto-fit */
+  gap: 20px;
+  align-items: start;
+  grid-auto-rows: auto;
+}
+.dashboard-columns {
+  display: flex;
+  gap: 30px;
+  padding: 30px;
+  align-items: flex-start;
+}
+
+.dashboard-left,
+.dashboard-middle,
+.dashboard-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.dashboard-left {
+  flex: 1;
+}
+
+.dashboard-middle {
+  flex: 1;
+  justify-content: flex-start;
+}
+
+.dashboard-right {
+  flex: 0.7;
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.summary-card {
+  padding: 20px;
+  border-radius: 16px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.summary-card .value {
+  font-size: 26px;
+  margin-top: 5px;
+}
+
+.summary-card.yellow {
+  background: #f9df69;
+  color: black;
+}
+
+.summary-card.blue {
+  background: #1e78ff;
+}
+
+.summary-card.purple {
+  background: #655dff;
+}
+
+.summary-card.orange {
+  background: #ff9000;
+}
+
+.calendar-box {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  font-size: 13px;
+  text-align: center;
+}
+
+.calendar-box table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.calendar-box th,
+.calendar-box td {
+  padding: 6px;
+  text-align: center;
+}
+
+canvas {
+  max-width: 120px;
+  margin: 0 auto 10px;
+}
