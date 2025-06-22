@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
       `;
 
-      // ✅ Edit Class on Click
+      // Edit Class on Click
       card.addEventListener("click", (e) => {
         e.stopPropagation(); // Prevent click conflicts
 
