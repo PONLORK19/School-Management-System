@@ -19,15 +19,6 @@ body {
   align-items: center;
 }
 
-/* Optionally uncomment and apply styling again for better visuals */
-/* 
-.container {
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-}
-*/
-
 .logo-container {
   text-align: center;
   margin-bottom: 20px;
@@ -139,4 +130,84 @@ input[type="password"] {
   justify-content: center;
   width: 100%;
   margin-top: 20px;
+}
+@media (max-width: 480px) {
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", sans-serif;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .container {
+    width: 100%;
+    padding: 30px 16px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  form {
+    width: 100%;
+    max-width: 360px;
+    background-color: white;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  .input-group {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px 16px;
+    border-radius: 25px;
+    background-color: #f4f5f7;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 0 0 1px #e2e2e2;
+    box-sizing: border-box;
+  }
+
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    background: transparent;
+  }
+
+  .forgot-password {
+    text-align: center;
+    display: block;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: none;
+  }
+
+  .button-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .login-btn {
+    width: 140px;
+    padding: 12px 0;
+    background-color: #0059ff;
+    color: #fff;
+    border: none;
+    border-radius: 999px;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  .login-btn:hover {
+    background-color: #3a8bff;
+  }
 }

@@ -172,3 +172,106 @@ canvas {
   max-width: 120px;
   margin: 0 auto 10px;
 }
+@media (max-width: 480px) {
+  .dashboard-container {
+    flex-direction: row;
+    height: auto;
+  }
+
+  .sidebar {
+    width: 220px;
+    padding: 20px 0;
+    background-color: #e1e4f0;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sidebar-logo img {
+    width: 80px;
+    margin-bottom: 15px;
+  }
+
+  .sidebar-menu {
+    width: 100%;
+  }
+
+  .sidebar-menu a {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: black;
+    transition: 0.3s ease;
+  }
+
+  .sidebar-menu .icon img {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+  }
+
+  .sidebar-menu a.active,
+  .sidebar-menu a:hover {
+    background-color: #0059ff;
+    color: white;
+    border-left: 4px solid white;
+  }
+
+  .main-area,
+  .main-content {
+    flex-grow: 1;
+    padding: 12px;
+  }
+
+  .dashboard-columns {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 10px;
+    align-items: center;
+  }
+
+  .dashboard-left,
+  .dashboard-middle,
+  .dashboard-right {
+    width: 100%;
+    align-items: center;
+  }
+
+  .card,
+  .summary-card,
+  .calendar-box {
+    width: 100%;
+    max-width: 350px;
+    margin-bottom: 16px;
+    border-radius: 20px;
+    padding: 16px;
+    font-size: 14px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+  }
+
+  .summary-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .summary-card .value {
+    font-size: 20px;
+  }
+
+  canvas {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .calendar-box h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .calendar-box table {
+    font-size: 12px;
+  }
+}

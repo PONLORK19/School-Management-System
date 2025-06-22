@@ -202,3 +202,36 @@ body {
 .add-btn:hover {
   background-color: #003bb3;
 }
+@media (max-width: 480px) {
+  .dashboard-container {
+    flex-direction: row;
+    height: auto;
+  }
+
+  .sidebar {
+    width: 220px;
+    padding: 20px 0;
+    background-color: #e1e4f0;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sidebar-logo img {
+    width: 80px;
+    margin-bottom: 15px;
+  }
+
+  .sidebar-menu a {
+    font-size: 14px;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-decoration: none;
+  }
+
+  .main-area {
+    flex-grow: 1;
+    padding: 15px;
+  }
+}

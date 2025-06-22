@@ -259,3 +259,100 @@ body {
   height: 18px;
   vertical-align: middle;
 }
+@media (max-width: 480px) {
+  .dashboard-container {
+    flex-direction: row;
+    height: auto;
+  }
+
+  .sidebar {
+    width: 220px;
+    padding: 20px 0;
+    background-color: #e1e4f0;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sidebar-logo img {
+    width: 80px;
+    margin-bottom: 15px;
+  }
+
+  .sidebar-menu a {
+    font-size: 14px;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-decoration: none;
+  }
+
+  .main-area {
+    flex-grow: 1;
+    padding: 15px;
+  }
+
+  /* === Search + Buttons === */
+  .top-bar {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+  }
+
+  .search-wrapper {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .search-wrapper input {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+
+  .controls {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+  }
+
+  .controls button {
+    width: auto;
+    padding: 6px 14px;
+    font-size: 13px;
+  }
+
+  /* === Table Styling === */
+  .student-table {
+    display: block;
+    overflow-x: auto;
+    width: 100%;
+    font-size: 13px;
+    border-radius: 10px;
+  }
+
+  .student-table th,
+  .student-table td {
+    white-space: nowrap;
+    padding: 10px;
+  }
+
+  /* === Modal === */
+  .modal-content {
+    padding: 20px;
+    max-width: 360px;
+    width: 90%;
+  }
+
+  .modal-content input,
+  .modal-content select {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .modal-content button {
+    font-size: 13px;
+    padding: 8px 14px;
+  }
+}
